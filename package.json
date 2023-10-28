@@ -1,0 +1,30 @@
+{
+  "name": "software-testing-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test c8 mocha --reporter mochawesome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jvapel/test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jvapel/test/issues"
+  },
+  "homepage": "https://github.com/jvapel/test#readme",
+  "devDependencies": {
+    "c8": "^8.0.1",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}
