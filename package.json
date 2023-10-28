@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "test c8 mocha --reporter mochawesome"
+    "test": "c8 mocha test/my-test.js --reporter mochawesome"
   },
   "repository": {
     "type": "git",

@@ -1,11 +1,11 @@
-const chai = require('chai');
-const expect = chai.expect;
+import chai from 'chai';
+import { describe, it } from 'mocha';
 
-const functions = require('..src/');
+import functions from '..src/';
 
 describe('SW testing course tool test', function () {
   it('should do something', function () {
     const result = functions.add(38,4);;
-    expect(result).to.equal(42);
+    chai.expect(result).to.equal(42);
   });
 });
