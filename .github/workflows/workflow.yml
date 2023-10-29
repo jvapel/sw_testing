@@ -27,7 +27,13 @@ jobs:
 
     - name: Send code coverage to coveralls
       #run: npx coveralls-next --report coverage/**/*.lcov
-      run: npx nyc report --reporter=lcov > coverage/lcov.info && npx coveralls-next
+      #run: npx nyc report --reporter=lcov > coverage/lcov.info && npx coveralls-next
+      run: |
+        if [ -d "coverage" ] && [ -f "coverage/lcov.info" ]; then
+          npx coveralls-next
+        else
+          echo "Code coverage data not found in the 'coverage' directory."
+        fi
       env:
         COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
     
