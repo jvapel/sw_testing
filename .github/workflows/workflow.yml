@@ -13,8 +13,9 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Build and Test
-      run: |
-        # Add your build and test commands here
+    - name: Run Tests with Code Coverage
+      run: 
         npm install
         npm test
+        npx c8 mocha my-test.js --reporter mochawesome
+    
