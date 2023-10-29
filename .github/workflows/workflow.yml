@@ -22,8 +22,8 @@ jobs:
       run: npm install
 
     - name: Run tests with code coverage
-      #run: npx c8 mocha my-test.js --reporter mochawesome
-      run: npx nyc --reporter lcov --report-dir coverage npx mocha my-test.js
+      run: npx c8 mocha my-test.js --reporter mocha-lcov-reporter
+      #run: npx nyc --reporter lcov --report-dir coverage npx mocha my-test.js
       continue-on-error: true
 
     - name: Send code coverage to coveralls
@@ -36,17 +36,17 @@ jobs:
       #    echo "Code coverage data not found in the 'coverage' directory."
       #  fi
       
-      run: |
-        if [ -d "coverage" ] && [ -f "coverage/lcov.info" ]; then
-          npx mocha-lcov-reporter/bin/mocha-lcov-reporter --output=coverage/lcov-report.info coverage/lcov.info
-          npx coveralls < coverage/lcov-report.info
-        else
-          echo "Code coverage data not found in the 'coverage' directory."
-        fi
-
+      #run: |
+      #  if [ -d "coverage" ] && [ -f "coverage/lcov.info" ]; then
+      #    npx mocha-lcov-reporter/bin/mocha-lcov-reporter --output=coverage/lcov-report.info coverage/lcov.info
+      #    npx coveralls < coverage/lcov-report.info
+      #  else
+      #    echo "Code coverage data not found in the 'coverage' directory."
+      #  fi
+      run: npx coveralls < coverage/lcov.info
       env:
         COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
 
-    #- name: Generate Mochawesome report
-    #  run: npx mocha my-test.js --reporter mochawesome
+    - name: Generate Mochawesome report
+      run: npx mocha my-test.js --reporter mochawesome
     
