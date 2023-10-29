@@ -14,5 +14,5 @@ describe('SW testing course tool test', function () {
     const result = divide(40,10);;
     chai.expect(result).to.equal(4);
   });
-
+ 
 });
