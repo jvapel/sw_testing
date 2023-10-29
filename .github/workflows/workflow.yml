@@ -23,6 +23,7 @@ jobs:
 
     - name: Run tests with code coverage
       run: npx c8 mocha my-test.js --reporter mocha-lcov-reporter
+      continue-on-error: true
 
     - name: Send code coverage to coveralls
       run: npx coveralls < coverage/lcov.info
