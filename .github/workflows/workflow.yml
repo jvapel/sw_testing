@@ -26,7 +26,8 @@ jobs:
       continue-on-error: true
 
     - name: Send code coverage to coveralls
-      run: npx coveralls-next --report coverage/**/*.lcov
+      #run: npx coveralls-next --report coverage/**/*.lcov
+      run: npx nyc report --reporter=lcov > coverage/lcov.info && npx coveralls-next
       env:
         COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
     
