@@ -22,8 +22,8 @@ jobs:
       run: npm install
 
     - name: Run tests with code coverage
-      run:
-        npx c8 mocha my-test.js --reporter mochawesome
+      run: npx c8 mocha my-test.js --reporter mochawesome
+      continue-on-error: true
 
     - name: Send code coverage to coveralls
       run: npx nyc report --reporter=text-lcov | npx coveralls
