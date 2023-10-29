@@ -26,7 +26,7 @@ jobs:
       continue-on-error: true
 
     - name: Send code coverage to coveralls
-      run: npx coveralls
+      run: npx coveralls-next
       env:
         COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
     
