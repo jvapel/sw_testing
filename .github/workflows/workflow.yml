@@ -38,7 +38,7 @@ jobs:
       
       run: |
         if [ -d "coverage" ] && [ -f "coverage/lcov.info" ]; then
-          npx mocha-lcov-reporter --output=coverage/lcov-report.info coverage/lcov.info
+          npx mocha-lcov-reporter/bin/mocha-lcov-reporter --output=coverage/lcov-report.info coverage/lcov.info
           npx coveralls < coverage/lcov-report.info
         else
           echo "Code coverage data not found in the 'coverage' directory."
