@@ -1,7 +1,7 @@
 import chai from 'chai';
 import { describe, it } from 'mocha';
 
-import functions from '..src/';
+import functions from '../src/';
 
 describe('SW testing course tool test', function () {
   it('should do something', function () {
