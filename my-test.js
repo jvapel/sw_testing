@@ -2,7 +2,6 @@ import chai from 'chai';
 import { describe, it } from 'mocha';
 
 import add from '../test/src/add.js';
-
 import divide from '../test/src/divide.js';
 
 describe('SW testing course tool test', function () {
