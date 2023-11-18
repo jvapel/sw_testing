@@ -1,8 +1,8 @@
 import chai from 'chai';
 import { describe, it } from 'mocha';
 
-import add from '../test/src/add.js';
-import divide from '../test/src/divide.js';
+import add from '../sw_testing/src/add.js';
+import divide from '../sw_testing/src/divide.js';
  
 describe('SW testing course tool test', function () {
   it('should be able to add integers', function () {
