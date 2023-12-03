@@ -22,7 +22,7 @@ jobs:
       run: npm install
 
     - name: Run tests with code coverage
-      run: npx c8 mocha test/**/*.test.js --bail=false # --exclude src/.internal/** --exclude-after-remap
+      run: npx c8 mocha test/**/*.test.js --reporter mochawesome --bail=false # --exclude src/.internal/** --exclude-after-remap
       continue-on-error: true
 
     - name: Send code coverage to coveralls
@@ -30,7 +30,4 @@ jobs:
       env:
         COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
 
-    - name: Generate Mochawesome report
-      run: npx mocha test/**/*.test.js --reporter mochawesome --bail=false
-      continue-on-error: true
     
