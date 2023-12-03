@@ -22,7 +22,7 @@ jobs:
       run: npm install
 
     - name: Run tests with code coverage
-      run: npx c8 mocha test/**/*.test.js --reporter mocha-lcov-reporter --bail=false # --exclude src/.internal/** --exclude-after-remap
+      run: npx c8 mocha test/**/*.test.js --bail=false # --exclude src/.internal/** --exclude-after-remap
       continue-on-error: true
 
     - name: Send code coverage to coveralls
