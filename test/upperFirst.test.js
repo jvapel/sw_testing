@@ -13,4 +13,7 @@ describe('upperFirst', function () {
 	it('should accept an empty string', function () {
 		expect(upperFirst('')).to.equal('');
 	});
+	it('should work with just one letter', function () {
+		expect(upperFirst('f')).to.equal('F');
+	});
 });
