@@ -15,4 +15,10 @@ describe('words', function() {
     it('should return an array of a single word from an input of one word', function() {
         expect(words('fred')).to.deep.equal(['fred'])
     });
+	it('should return an empty array from an empty input', function() {
+        expect(words('')).to.deep.equal([])
+    });
+	it('should return an empty array from an empty input with a pattern', function() {
+        expect(words('', pattern)).to.deep.equal([])
+    });
 })
