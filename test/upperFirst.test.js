@@ -10,4 +10,7 @@ describe('upperFirst', function () {
 		expect(upperFirst('FRED')).to.equal('FRED');
 		expect(upperFirst('Fred')).to.equal('Fred');
 	});
+	it('should accept an empty string', function () {
+		expect(upperFirst('')).to.equal('');
+	});
 });
