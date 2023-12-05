@@ -17,8 +17,8 @@ describe('defaultTo', function() {
         expect(defaultTo(15, 10)).to.equal(15)
     });
 	it('should return the value if the value is false, zero, or an empty string', function() {
-        expect(defaultTo(false, 10)).to.equal(15)
-		expect(defaultTo(0, 10)).to.equal(15)
-		expect(defaultTo('', 10)).to.equal(15)
+        expect(defaultTo(false, 10)).to.equal(false)
+		expect(defaultTo(0, 10)).to.equal(0)
+		expect(defaultTo('', 10)).to.equal('')
     });
 })
