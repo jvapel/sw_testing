@@ -32,6 +32,7 @@
     "nyc": "^15.1.0"
   },
   "c8": {
+	"all": true,
     "src": "src",
     "reporter": "lcov",
     "reportDir": "coverage"
