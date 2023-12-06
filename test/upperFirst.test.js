@@ -16,4 +16,10 @@ describe('upperFirst', function () {
 	it('should work with just one letter', function () {
 		expect(upperFirst('f')).to.equal('F');
 	});
+	it('should work when the first character is a space', function () {
+		expect(upperFirst(' fred')).to.equal(' fred');
+	});
+	it('should not change the first character if it is a number', function () {
+		expect(upperFirst('2fred')).to.equal('2fred');
+	});
 });
