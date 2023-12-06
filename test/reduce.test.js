@@ -12,4 +12,10 @@ describe('reduce', function() {
             (result[value] || (result[value] = [])).push(key)
             return result}, {})).to.deep.equal({ '1': ['a', 'c'], '2': ['b'] })
     });
+	it('should use the first element as the default accumulator if none is given', function() {
+        expect(reduce([1, 2], (a,b,c,d) => a)).to.equal(1)
+    });
+	it('should support empty collections', function() {
+        expect(reduce([], (a,b,c,d) => a, 1)).to.equal(1)
+    });
 })
