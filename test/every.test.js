@@ -21,4 +21,7 @@ describe('every', function() {
 	it('should return true for empty arrays', function() {
         expect(every([], Boolean)).to.be.true
     });
+	it('should return true if the array is null', function() {
+        expect(every(null, Boolean)).to.be.true
+    });
 })
