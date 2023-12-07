@@ -20,4 +20,13 @@ describe('filter', function () {
 			[{ 'user': 'barney', 'active': true }]
 		);
 	});
-});
+	it('should return an empty array if `predicate` does not return truthy for anything', function () {
+		const user = [
+			{ 'user': 'barney', 'active': false },
+		];
+		expect(filter(user, ({active}) => active)).to.deep.equal([]);
+	});
+	it('should return an empty array if the array is null', function () {
+		expect(filter(null, ({active}) => active)).to.deep.equal([]);
+	});
+})
