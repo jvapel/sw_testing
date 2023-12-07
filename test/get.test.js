@@ -14,4 +14,7 @@ describe('get', function() {
     it('should return the default value if the resolved value is undefined', function() {
         expect(get(object, 'a.b.c', 'default')).to.equal('default')
     });
+    it('should return default value if the object is null', function() {
+        expect(get(null, 'a.b.c', 'default')).to.equal('default')
+    });
 })
