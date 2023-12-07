@@ -21,5 +21,8 @@ describe('map', function() {
     it('should work with arrays of strings when given a suitable function', function() {
         expect(map(["bob", "fred"], checklength)).to.deep.equal([3,4])
     });
+    it('should return an empty array if the input array is null', function() {
+        expect(map(null, checklength)).to.deep.equal([])
+    });
 
 })
