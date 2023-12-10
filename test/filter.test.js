@@ -22,7 +22,7 @@ describe('filter', function () {
 	});
 	it('should return an empty array if `predicate` does not return truthy for anything', function () {
 		const user = [
-			{ 'user': 'barney', 'active': false },
+			{ 'user': 'barney', 'active': false }
 		];
 		expect(filter(user, ({active}) => active)).to.deep.equal([]);
 	});
