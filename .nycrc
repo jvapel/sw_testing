@@ -1,5 +1,6 @@
 {
   "exclude": [
-    "src/.internal/**"
+    "src/.internal/**",
+    "test/**"
   ]
 }
