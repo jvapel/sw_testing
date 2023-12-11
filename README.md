@@ -1,4 +1,5 @@
 # Student template
+[![Coverage Status](https://coveralls.io/repos/github/jvapel/test/badge.svg?branch=main)](https://coveralls.io/github/jvapel/test?branch=main)
 
 ## Purpose of this repository
 
